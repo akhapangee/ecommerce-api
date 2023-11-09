@@ -2,7 +2,7 @@
 
 This project is written in Java using Spring Boot, Hibernate ORM, and the H2 database. H2 is an in memory database, so if you need to retry something, every application startup is a fresh copy.
 
-## Project Template
+## Project Overview
 Once the project is set up, you will see 5 packages:
 
 * api - this package contains the main method which runs the application
