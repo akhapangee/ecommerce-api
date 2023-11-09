@@ -1,0 +1,332 @@
+2023-11-09 15:30:42.726 [main] INFO  com.ecommerce.api.MainApplication.logStarting - Starting Application on Akhileshs-MBP.lan with PID 10472 (/Volumes/My Files/Projects/ecommerce-api/target/classes started by akhapangee in /Volumes/My Files/Projects/ecommerce-api)
+2023-11-09 15:30:42.728 [main] INFO  com.ecommerce.api.MainApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2023-11-09 15:30:42.930 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 15:30:42.954 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20ms. Found 4 JPA repository interfaces.
+2023-11-09 15:30:43.259 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-11-09 15:30:43.264 [main] INFO  org.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-09 15:30:43.264 [main] INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+2023-11-09 15:30:43.264 [main] INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-11-09 15:30:43.305 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2023-11-09 15:30:43.305 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 551 ms
+2023-11-09 15:30:43.327 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2023-11-09 15:30:43.394 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2023-11-09 15:30:43.397 [main] INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0 - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2023-11-09 15:30:43.473 [main] INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 15:30:43.490 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.18.Final
+2023-11-09 15:30:43.542 [main] INFO  org.hibernate.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-11-09 15:30:43.584 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 15:30:43.698 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 15:30:43.701 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:30:43.748 [main] ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'JWTAuthenticationVerificationFilter' defined in file [/Volumes/My Files/Projects/ecommerce-api/target/classes/com/ecommerce/api/security/jwt/JWTAuthenticationVerificationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration' defined in file [/Volumes/My Files/Projects/ecommerce-api/target/classes/com/ecommerce/api/security/WebSecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.ecommerce.api.model.persistence.repositories.UserRepository defined in @EnableJpaRepositories declared on Application: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+2023-11-09 15:30:43.756 [main] INFO  org.apache.catalina.core.StandardService.log - Stopping service [Tomcat]
+2023-11-09 15:30:43.758 [main] WARN  org.apache.catalina.loader.WebappClassLoaderBase.log - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1589)
+2023-11-09 15:30:43.758 [main] WARN  org.apache.catalina.loader.WebappClassLoaderBase.log - The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1589)
+2023-11-09 15:30:43.759 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2023-11-09 15:30:43.759 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:30:43.760 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2023-11-09 15:30:43.761 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2023-11-09 15:30:43.765 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 15:30:43.767 [main] ERROR org.springframework.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.ecommerce.api.MainApplication.main(Application.java:17)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'JWTAuthenticationVerificationFilter' defined in file [/Volumes/My Files/Projects/ecommerce-api/target/classes/com/ecommerce/api/security/jwt/JWTAuthenticationVerificationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration' defined in file [/Volumes/My Files/Projects/ecommerce-api/target/classes/com/ecommerce/api/security/WebSecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.ecommerce.api.model.persistence.repositories.UserRepository defined in @EnableJpaRepositories declared on Application: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:255)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:229)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5128)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration' defined in file [/Volumes/My Files/Projects/ecommerce-api/target/classes/com/ecommerce/api/security/WebSecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.ecommerce.api.model.persistence.repositories.UserRepository defined in @EnableJpaRepositories declared on Application: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 55 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.ecommerce.api.model.persistence.repositories.UserRepository defined in @EnableJpaRepositories declared on Application: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 78 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.ecommerce.api.model.persistence.repositories.UserRepository defined in @EnableJpaRepositories declared on Application: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 92 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.ecommerce.api.model.persistence.User
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582)
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:229)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:179)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:162)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:72)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:309)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 102 common frames omitted
+2023-11-09 15:31:27.039 [main] INFO  com.ecommerce.api.MainApplication.logStarting - Starting Application on Akhileshs-MBP.lan with PID 10481 (/Volumes/My Files/Projects/ecommerce-api/target/classes started by akhapangee in /Volumes/My Files/Projects/ecommerce-api)
+2023-11-09 15:31:27.040 [main] INFO  com.ecommerce.api.MainApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2023-11-09 15:31:27.245 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 15:31:27.269 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20ms. Found 4 JPA repository interfaces.
+2023-11-09 15:31:27.576 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-11-09 15:31:27.580 [main] INFO  org.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-09 15:31:27.581 [main] INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+2023-11-09 15:31:27.581 [main] INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-11-09 15:31:27.620 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2023-11-09 15:31:27.620 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+2023-11-09 15:31:27.642 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2023-11-09 15:31:27.711 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2023-11-09 15:31:27.714 [main] INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0 - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2023-11-09 15:31:27.790 [main] INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 15:31:27.808 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.18.Final
+2023-11-09 15:31:27.856 [main] INFO  org.hibernate.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-11-09 15:31:27.899 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 15:31:28.183 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 15:31:28.192 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:31:28.327 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-09 15:31:28.441 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/h2/**'], []
+2023-11-09 15:31:28.512 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e5e3147, org.springframework.security.web.context.SecurityContextPersistenceFilter@14d53884, org.springframework.security.web.header.HeaderWriterFilter@7fc56d61, org.springframework.web.filter.CorsFilter@3c271988, org.springframework.security.web.authentication.logout.LogoutFilter@e27d97b, com.ecommerce.api.security.jwt.JWTAuthenticationFilter@3aed692d, com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter@4eec5fa6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@546c30c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18f27a81, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21579b35, org.springframework.security.web.session.SessionManagementFilter@6074d638, org.springframework.security.web.access.ExceptionTranslationFilter@45b6c666, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6cd6698b]
+2023-11-09 15:31:28.532 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 15:31:28.574 [main] INFO  org.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-09 15:31:28.589 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-09 15:31:28.594 [main] INFO  com.ecommerce.api.MainApplication.logStarted - Started Application in 1.689 seconds (JVM running for 1.897)
+2023-11-09 15:31:36.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 15:31:36.259 [SpringContextShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:31:36.259 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2023-11-09 15:31:36.260 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2023-11-09 15:43:45.641 [main] INFO  com.ecommerce.api.MainApplication.logStarting - Starting MainApplication on Akhileshs-MBP.lan with PID 10832 (/Volumes/My Files/Projects/ecommerce-api/target/classes started by akhapangee in /Volumes/My Files/Projects/ecommerce-api)
+2023-11-09 15:43:45.642 [main] INFO  com.ecommerce.api.MainApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2023-11-09 15:43:45.852 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 15:43:45.876 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19ms. Found 4 JPA repository interfaces.
+2023-11-09 15:43:46.186 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-11-09 15:43:46.191 [main] INFO  org.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-09 15:43:46.192 [main] INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+2023-11-09 15:43:46.192 [main] INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-11-09 15:43:46.233 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2023-11-09 15:43:46.233 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 562 ms
+2023-11-09 15:43:46.255 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2023-11-09 15:43:46.325 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2023-11-09 15:43:46.328 [main] INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0 - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2023-11-09 15:43:46.410 [main] INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 15:43:46.430 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.18.Final
+2023-11-09 15:43:46.483 [main] INFO  org.hibernate.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-11-09 15:43:46.529 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 15:43:46.822 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 15:43:46.830 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:43:46.969 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-09 15:43:47.093 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/h2/**'], []
+2023-11-09 15:43:47.166 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2346f77a, org.springframework.security.web.context.SecurityContextPersistenceFilter@178c6261, org.springframework.security.web.header.HeaderWriterFilter@66fff42f, org.springframework.web.filter.CorsFilter@5bcfdaf3, org.springframework.security.web.authentication.logout.LogoutFilter@225ac5e7, com.ecommerce.api.security.jwt.JWTAuthenticationFilter@38347345, com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter@4b9b5da5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2555a986, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75adb1c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ff29e8b, org.springframework.security.web.session.SessionManagementFilter@32cde414, org.springframework.security.web.access.ExceptionTranslationFilter@783f5f71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61d150af]
+2023-11-09 15:43:47.191 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 15:43:47.237 [main] INFO  org.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-09 15:43:47.252 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-09 15:43:47.257 [main] INFO  com.ecommerce.api.MainApplication.logStarted - Started MainApplication in 1.751 seconds (JVM running for 1.965)
+2023-11-09 15:43:53.112 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-09 15:43:53.112 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-11-09 15:43:53.115 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
+2023-11-09 15:43:53.154 [http-nio-8080-exec-2] INFO  com.ecommerce.api.controllers.UserController.createUser - Executing method...
+2023-11-09 15:43:53.289 [http-nio-8080-exec-2] INFO  com.ecommerce.api.controllers.UserController.createUser - [User Creation Success]: User 'hari' created successfully!
+2023-11-09 15:43:56.004 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:43:56.102 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:43:56.193 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:44:07.563 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:44:07.596 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:44:07.596 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:44:07.597 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:44:07.600 [http-nio-8080-exec-4] INFO  com.ecommerce.api.controllers.UserController.findByUserName - Fetching user by username: 'alex'
+2023-11-09 15:44:29.119 [http-nio-8080-exec-5] ERROR com.ecommerce.api.security.jwt.JWTAuthenticationEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2023-11-09 15:44:41.814 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:44:41.817 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:44:41.818 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:44:41.824 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:44:41.827 [http-nio-8080-exec-6] INFO  com.ecommerce.api.controllers.UserController.findById - Fetching user with id: '11'
+2023-11-09 15:44:46.695 [http-nio-8080-exec-7] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:44:46.696 [http-nio-8080-exec-7] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:44:46.794 [http-nio-8080-exec-7] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:02.230 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:02.234 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:02.235 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:02.239 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:02.241 [http-nio-8080-exec-8] INFO  com.ecommerce.api.controllers.UserController.findByUserName - Fetching user by username: 'hari'
+2023-11-09 15:45:02.244 [http-nio-8080-exec-8] INFO  com.ecommerce.api.controllers.UserController.findByUserName - User with username hari found
+2023-11-09 15:45:13.596 [http-nio-8080-exec-9] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:13.599 [http-nio-8080-exec-9] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:13.601 [http-nio-8080-exec-9] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:13.607 [http-nio-8080-exec-9] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:13.609 [http-nio-8080-exec-9] INFO  com.ecommerce.api.controllers.UserController.findById - Fetching user with id: '11'
+2023-11-09 15:45:20.248 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:20.251 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:20.347 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:23.520 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:23.522 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:23.619 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:25.026 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:25.031 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:25.138 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:26.327 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:26.332 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:26.427 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:27.399 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:27.401 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:27.490 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:28.868 [http-nio-8080-exec-5] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:28.871 [http-nio-8080-exec-5] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:28.978 [http-nio-8080-exec-5] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:30.250 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:30.253 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:30.357 [http-nio-8080-exec-6] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:40.078 [http-nio-8080-exec-7] INFO  com.ecommerce.api.controllers.UserController.createUser - Executing method...
+2023-11-09 15:45:40.082 [http-nio-8080-exec-7] ERROR com.ecommerce.api.controllers.UserController.createUser - [User Creation Failure]: Username 'hari' already exists.
+2023-11-09 15:45:43.787 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.attemptAuthentication - Attempting authentication...
+2023-11-09 15:45:43.789 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.service.UserDetailsServiceImpl.loadUserByUsername - [User Load from Storage]: Loading user by username: hari
+2023-11-09 15:45:43.883 [http-nio-8080-exec-8] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationFilter.successfulAuthentication - [Token Generation]: Generating JWT token after successful authentication...
+2023-11-09 15:45:55.772 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:55.775 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:55.775 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:55.777 [http-nio-8080-exec-10] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:55.779 [http-nio-8080-exec-10] INFO  com.ecommerce.api.controllers.UserController.findByUserName - Fetching user by username: 'hari'
+2023-11-09 15:45:55.781 [http-nio-8080-exec-10] INFO  com.ecommerce.api.controllers.UserController.findByUserName - User with username hari found
+2023-11-09 15:45:58.974 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:58.977 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:58.978 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:45:58.979 [http-nio-8080-exec-1] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:45:58.980 [http-nio-8080-exec-1] INFO  com.ecommerce.api.controllers.UserController.findByUserName - Fetching user by username: 'd'
+2023-11-09 15:46:06.453 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:06.457 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:06.459 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:06.460 [http-nio-8080-exec-2] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:06.461 [http-nio-8080-exec-2] INFO  com.ecommerce.api.controllers.UserController.findById - Fetching user with id: '11'
+2023-11-09 15:46:13.616 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:13.618 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:13.619 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:13.621 [http-nio-8080-exec-3] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:13.623 [http-nio-8080-exec-3] INFO  com.ecommerce.api.controllers.UserController.findById - Fetching user with id: '11'
+2023-11-09 15:46:16.562 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:16.564 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:16.566 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Verifying JWT token...
+2023-11-09 15:46:16.567 [http-nio-8080-exec-4] INFO  com.ecommerce.api.security.jwt.JWTAuthenticationVerificationFilter.getAuthentication - [Token Verification]: Token verified successfully...
+2023-11-09 15:46:16.569 [http-nio-8080-exec-4] INFO  com.ecommerce.api.controllers.UserController.findById - Fetching user with id: '1'
+2023-11-09 15:46:16.574 [http-nio-8080-exec-4] INFO  com.ecommerce.api.controllers.UserController.findById - User with id 1 found
+2023-11-09 15:46:20.456 [http-nio-8080-exec-5] ERROR com.ecommerce.api.security.jwt.JWTAuthenticationEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2023-11-09 15:46:27.475 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 15:46:27.476 [SpringContextShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 15:46:27.477 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2023-11-09 15:46:27.478 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
